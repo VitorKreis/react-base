@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Title, Paragraf } from "./styled";
-import { Container } from "../../../styles/GlobalStyles";
+import { Container } from "../../styles/GlobalStyles";
 
 const hasName = "Jose";
 

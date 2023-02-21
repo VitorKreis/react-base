@@ -12,7 +12,7 @@ export default function PrivateRoutes({
   if (isClosed && !isLoggidIn) {
     return (
       <Redirect
-        to={{ path: "/login", state: { prevPath: rest.location.pathname } }}
+        to={{ pathname: "/login", state: { prevPath: rest.location.pathname } }}
       />
     );
   }
