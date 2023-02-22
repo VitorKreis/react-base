@@ -9,10 +9,10 @@ export default function Headers() {
       <Link to="/">
         <FaHome size={19} />
       </Link>
-      <Link to="login">
+      <Link to="/login">
         <FaUser size={19} />
       </Link>
-      <Link to="asd">
+      <Link to="/asd">
         <FaSignInAlt size={19} />
       </Link>
     </Nav>

@@ -1,15 +1,15 @@
 import React from "react";
 import { Switch } from "react-router-dom";
 
-import PrivateRoutes from "./PrivateRoute";
+import MyRoute from "./MyRoute";
 import Login from "../pages/login";
 import Page404 from "../pages/Page404";
 
-export default function Rotas() {
+export default function Routes() {
   return (
     <Switch>
-      <PrivateRoutes exact path="/" component={Login} />
-      <PrivateRoutes path="*" component={Page404} />
+      <MyRoute exact path="/" component={Login} />
+      <MyRoute path="*" component={Page404} />
     </Switch>
   );
 }

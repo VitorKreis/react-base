@@ -1,15 +1,11 @@
 import React from "react";
-import { Redirect, Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 
-export default function PrivateRoutes({
-  component: Component,
-  isClosed,
-  ...rest
-}) {
-  const isLoggidIn = false;
+export default function MyRoute({ component: Component, isClosed, ...rest }) {
+  const isLoggedIn = false;
 
-  if (isClosed && !isLoggidIn) {
+  if (isClosed && !isLoggedIn) {
     return (
       <Redirect
         to={{ pathname: "/login", state: { prevPath: rest.location.pathname } }}
@@ -21,11 +17,11 @@ export default function PrivateRoutes({
   return <Route {...rest} component={Component} />;
 }
 
-PrivateRoutes.defaultProps = {
+MyRoute.defaultProps = {
   isClosed: false,
 };
 
-PrivateRoutes.propTypes = {
+MyRoute.propTypes = {
   component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
     .isRequired,
   isClosed: PropTypes.bool,
