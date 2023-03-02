@@ -1,5 +1,6 @@
 import React from "react";
 import { Router } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 import history from "./services/history";
 import GlobalStyles from "./styles/GlobalStyles";
@@ -11,6 +12,7 @@ function App() {
     <Router history={history}>
       <Header />
       <GlobalStyles />
+      <ToastContainer autoClose={2000} className="toastify-Container" />
       <Rotas />
     </Router>
   );
